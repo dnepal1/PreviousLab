@@ -69,14 +69,21 @@ namespace htel
                     cost = NumberOfnight * 75.3;
                 }
                 //checking if the room service is included
-                if (roomService == "yes")
-                {
-                    cost = cost + (cost * .10);
+               // if (roomService == "yes")
+                //{
+                //    cost = cost + (cost * .10);
 
-                }
+               // }
+               if (roomService.ToLower() == "yes")
+{
+    cost = cost + (cost * 0.10);
+}
+
                 costlist[i] = cost;
                 //printing results
-                Console.WriteLine("Total price for "+ Name+ " is $"+ cost);
+                //Console.WriteLine("Total price for "+ Name+ " is $"+ cost);
+                Console.WriteLine("Total price for " + Name + " is $" + cost.ToString("F2"));
+
                 
                 i = i + 1;
 
